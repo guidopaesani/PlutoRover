@@ -97,9 +97,45 @@ namespace PlutoRover.Tests
             GridMap map = new GridMap(50, 50);
             map.Obstacles.Add(new Position(0, 1));
             IRover rover = new Rover(map, initialPosition, initialDirection);
-            Assert.Throws<Exception>(() => { rover.MoveForward(); });            
-            
+            Assert.Throws<Exception>(() => { rover.MoveForward(); });
         }
+
+        [Test]
+        public void Trying_to_move_to_position_where_no_obstacle_detected_doesnt_throw_exception()
+        {
+            Position initialPosition = new Position(11, 10);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(50, 50);
+            map.Obstacles.Add(new Position(10, 10));
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            Assert.DoesNotThrow(() => { rover.MoveBackwards(); });
+        }
+
+        [Test]
+        public void Rotate_Left_From_North_Equals_West()
+        {
+            Position initialPosition = new Position(11, 10);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(50, 50);
+            map.Obstacles.Add(new Position(10, 10));
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.RotateLeft();
+            Assert.IsTrue(rover.Direction == Direction.West);
+        }
+
+        [Test]
+        public void Rotate_Right_From_East_Equals_South()
+        {
+            Position initialPosition = new Position(11, 10);
+            Direction initialDirection = Direction.East;
+            GridMap map = new GridMap(50, 50);
+            map.Obstacles.Add(new Position(10, 10));
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.RotateRight();
+            Assert.IsTrue(rover.Direction == Direction.South);
+        }
+
+
 
 
 

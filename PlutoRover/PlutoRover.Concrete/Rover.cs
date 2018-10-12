@@ -9,16 +9,17 @@ namespace PlutoRover.Concrete
     {
         private Position _position;
         private GridMap _map;
+        private Direction _direction;
 
         public Rover(GridMap map, Position initialPosition, Direction initialDirection)
         {
             _position = initialPosition;
-            Direction = initialDirection;
+            _direction = initialDirection;
             _map = map;
         }
 
         public Position Position => _position;
-        public Direction Direction { get; }
+        public Direction Direction => _direction;
 
         public void MoveBackwards()
         {
@@ -68,6 +69,45 @@ namespace PlutoRover.Concrete
             _position = DetectBoundariesCrossing(newPosition, _map);
 
 
+        }
+
+        public void RotateLeft()
+        {
+            switch (_direction)
+            {
+                case Direction.North:
+                    _direction = Direction.West;
+                    break;
+                case Direction.South:
+                    _direction = Direction.East;
+                    break;
+                case Direction.East:
+                    _direction = Direction.North;
+                    break;
+                case Direction.West:
+                    _direction = Direction.South;
+                    break;
+            }
+        }
+
+        public void RotateRight()
+        {
+            switch (Direction)
+            {
+                case Direction.North:
+                    _direction = Direction.East;
+                    break;
+                case Direction.South:
+                    _direction = Direction.West;
+                    break;
+                case Direction.East:
+                    _direction = Direction.South;
+                    break;
+                case Direction.West:
+                    _direction = Direction.North;
+                    break;
+
+            }
         }
 
         private Position DetectBoundariesCrossing(Position position, GridMap map)

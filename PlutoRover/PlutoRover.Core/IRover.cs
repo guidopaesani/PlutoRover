@@ -8,6 +8,9 @@ namespace PlutoRover.Core
     {
         void MoveForward();
         void MoveBackwards();
+        void RotateLeft();
+        void RotateRight();
         Position Position { get; }
+        Direction Direction { get; }
     }
 }
