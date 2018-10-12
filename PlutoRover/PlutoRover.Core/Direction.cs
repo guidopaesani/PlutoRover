@@ -6,6 +6,7 @@ namespace PlutoRover.Core
 {
     public enum Direction
     {
-        North
+        North,
+        East
     }
 }

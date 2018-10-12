@@ -11,7 +11,7 @@ namespace PlutoRover.Tests
     public class RoverTests
     {
         [Test]
-        public void Rover_Can_Move_Forward()
+        public void Rover_Can_Move_Forward_From_0_0()
         {
             Position initialPosition = new Position(0, 0);
             Direction initialDirection = Direction.North;
@@ -21,5 +21,55 @@ namespace PlutoRover.Tests
             Assert.IsTrue(rover.Position.X == 0);
             Assert.IsTrue(rover.Position.Y == 1);
         }
+        [Test]
+        public void Rover_Can_Move_Forward_From_Other_Starting_Point()
+        {
+            Position initialPosition = new Position(10, 10);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(100, 100);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveForward();
+            Assert.IsTrue(rover.Position.X == 10);
+            Assert.IsTrue(rover.Position.Y == 11);
+        }
+
+        [Test]
+        public void Rover_Can_Move_BackWards()
+        {
+            Position initialPosition = new Position(10, 10);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(100, 100);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveBackwards();
+            Assert.IsTrue(rover.Position.X == 10);
+            Assert.IsTrue(rover.Position.Y == 9);
+        }
+
+        [Test]
+        public void Rover_Can_Move_BackWards_When_Facing_East()
+        {
+            Position initialPosition = new Position(5, 5);
+            Direction initialDirection = Direction.East;
+            GridMap map = new GridMap(100, 100);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveBackwards();
+            Assert.IsTrue(rover.Position.X == 4);
+            Assert.IsTrue(rover.Position.Y == 5);
+        }
+        public void Rover_Can_Move_Forward_When_Facing_East()
+        {
+            Position initialPosition = new Position(5, 5);
+            Direction initialDirection = Direction.East;
+            GridMap map = new GridMap(100, 100);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveBackwards();
+            Assert.IsTrue(rover.Position.X == 6);
+            Assert.IsTrue(rover.Position.Y == 5);
+        }
+
+
+
+
+
     }
 }
