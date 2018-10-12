@@ -22,44 +22,50 @@ namespace PlutoRover.Concrete
 
         public void MoveBackwards()
         {
+            Position newPosition = _position;
             switch (Direction)
             {
                 case Direction.North:
-                    _position = new Position(_position.X, _position.Y - 1);
+                    newPosition = new Position(_position.X, _position.Y - 1);
                     break;
                 case Direction.South:
-                    _position = new Position(_position.X, _position.Y + 1);
+                    newPosition = new Position(_position.X, _position.Y + 1);
                     break;
                 case Direction.East:
-                    _position = new Position(_position.X - 1, _position.Y);
+                    newPosition = new Position(_position.X - 1, _position.Y);
                     break;
                 case Direction.West:
-                    _position = new Position(_position.X + 1, _position.Y);
+                    newPosition = new Position(_position.X + 1, _position.Y);
                     break;
             }
-            _position = DetectBoundariesCrossing(_position, _map);
+            if (DetectObstacle(_map, newPosition)) throw new Exception("Can't move to that position! obstacle detected");
+            
+            _position = DetectBoundariesCrossing(newPosition, _map);
 
         }
 
         public void MoveForward()
         {
+            Position newPosition = _position;
+
             switch (Direction)
             {
                 case Direction.North:
-                    _position = new Position(_position.X, _position.Y + 1);
+                    newPosition = new Position(_position.X, _position.Y + 1);
                     break;
                 case Direction.South:
-                    _position = new Position(_position.X, _position.Y - 1);
+                    newPosition = new Position(_position.X, _position.Y - 1);
                     break;
                 case Direction.East:
-                    _position = new Position(_position.X + 1, _position.Y);
+                    newPosition = new Position(_position.X + 1, _position.Y);
                     break;
                 case Direction.West:
-                    _position = new Position(_position.X - 1, _position.Y);
+                    newPosition = new Position(_position.X - 1, _position.Y);
                     break;
             }
-            _position = DetectBoundariesCrossing(_position, _map);
-           
+            if (DetectObstacle(_map, newPosition)) throw new Exception("Can't move to that position! obstacle detected");
+
+            _position = DetectBoundariesCrossing(newPosition, _map);
 
 
         }
@@ -72,6 +78,13 @@ namespace PlutoRover.Concrete
             if (position.Y > map.MaxY) return new Position(position.X, 0);
             return position;
         }
+
+        private bool DetectObstacle(GridMap map, Position position)
+        {
+            if (map.Obstacles.Exists(obs => obs.X == position.X && obs.Y == position.Y)) return true;
+            return false;
+        }
+        
 
 
     }

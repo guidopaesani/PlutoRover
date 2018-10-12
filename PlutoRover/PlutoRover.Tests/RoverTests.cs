@@ -89,6 +89,17 @@ namespace PlutoRover.Tests
             Assert.IsTrue(rover.Position.X == 0);
             Assert.IsTrue(rover.Position.Y == 49);
         }
+        [Test]
+        public void Trying_to_move_to_position_where_obstacle_detected_throws_exception()
+        {
+            Position initialPosition = new Position(0, 0);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(50, 50);
+            map.Obstacles.Add(new Position(0, 1));
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            Assert.Throws<Exception>(() => { rover.MoveForward(); });            
+            
+        }
 
 
 

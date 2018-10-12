@@ -10,7 +10,10 @@ namespace PlutoRover.Core
         {
             MaxX = sizeX - 1;
             MaxY = sizeY - 1;
+            Obstacles = new List<Position>();
         }
+
+        public List<Position> Obstacles { get; set; }
 
         public int MaxX { get; }
         public int MaxY { get; }
