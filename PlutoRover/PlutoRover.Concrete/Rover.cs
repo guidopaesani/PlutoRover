@@ -7,16 +7,17 @@ namespace PlutoRover.Concrete
 {
     public class Rover : IRover
     {
+        private Position _position;
         public Rover(GridMap map, Position initialPosition, Direction initialDirection)
         {
-
+            _position = initialPosition;
         }
 
-        public Position Position => throw new NotImplementedException();
+        public Position Position => _position;
 
         public void MoveForward()
         {
-            throw new NotImplementedException();
+            _position = new Position(0, 1);
         }
     }
 }
