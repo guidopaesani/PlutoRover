@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "PlutoRover.Concrete/1.0.0": {
+        "dependencies": {
+          "PlutoRover.Core": "1.0.0"
+        },
         "runtime": {
           "PlutoRover.Concrete.dll": {}
+        }
+      },
+      "PlutoRover.Core/1.0.0": {
+        "runtime": {
+          "PlutoRover.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "PlutoRover.Concrete/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlutoRover.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

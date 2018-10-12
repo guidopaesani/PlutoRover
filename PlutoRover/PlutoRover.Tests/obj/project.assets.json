@@ -1643,6 +1643,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "PlutoRover.Concrete/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "PlutoRover.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PlutoRover.Concrete.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlutoRover.Concrete.dll": {}
+        }
+      },
+      "PlutoRover.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PlutoRover.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlutoRover.Core.dll": {}
+        }
       }
     }
   },
@@ -5666,6 +5689,16 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "PlutoRover.Concrete/1.0.0": {
+      "type": "project",
+      "path": "../PlutoRover.Concrete/PlutoRover.Concrete.csproj",
+      "msbuildProject": "../PlutoRover.Concrete/PlutoRover.Concrete.csproj"
+    },
+    "PlutoRover.Core/1.0.0": {
+      "type": "project",
+      "path": "../PlutoRover.Core/PlutoRover.Core.csproj",
+      "msbuildProject": "../PlutoRover.Core/PlutoRover.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5673,7 +5706,9 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "NUnit >= 3.11.0",
-      "NUnit3TestAdapter >= 3.10.0"
+      "NUnit3TestAdapter >= 3.10.0",
+      "PlutoRover.Concrete >= 1.0.0",
+      "PlutoRover.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5708,7 +5743,14 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Guido\\source\\repos\\FlexApps\\PlutoRover\\PlutoRover.Core\\PlutoRover.Core.csproj": {
+              "projectPath": "C:\\Users\\Guido\\source\\repos\\FlexApps\\PlutoRover\\PlutoRover.Core\\PlutoRover.Core.csproj"
+            },
+            "C:\\Users\\Guido\\source\\repos\\FlexApps\\PlutoRover\\PlutoRover.Concrete\\PlutoRover.Concrete.csproj": {
+              "projectPath": "C:\\Users\\Guido\\source\\repos\\FlexApps\\PlutoRover\\PlutoRover.Concrete\\PlutoRover.Concrete.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

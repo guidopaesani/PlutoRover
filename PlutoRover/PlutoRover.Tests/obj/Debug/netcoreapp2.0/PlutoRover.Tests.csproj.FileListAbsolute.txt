@@ -8,3 +8,12 @@ C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netco
 C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
 C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
 C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\Mono.Cecil.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.runtimeconfig.json
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.runtimeconfig.dev.json
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Tests.pdb
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Concrete.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Core.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Concrete.pdb
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\bin\Debug\netcoreapp2.0\PlutoRover.Core.pdb
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Tests\obj\Debug\netcoreapp2.0\PlutoRover.Tests.pdb
