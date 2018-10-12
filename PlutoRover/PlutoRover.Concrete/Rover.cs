@@ -37,10 +37,8 @@ namespace PlutoRover.Concrete
                     _position = new Position(_position.X + 1, _position.Y);
                     break;
             }
-            if (_position.X < 0) _position = new Position(_map.MaxX, _position.Y);
-            if (_position.Y < 0) _position = new Position(_position.X, _map.MaxY);
-            if (_position.X > _map.MaxX) _position = new Position(0, _position.Y);
-            if (_position.Y > _map.MaxY) _position = new Position(_position.X, 0);
+            _position = DetectBoundariesCrossing(_position, _map);
+
         }
 
         public void MoveForward()
@@ -60,13 +58,19 @@ namespace PlutoRover.Concrete
                     _position = new Position(_position.X - 1, _position.Y);
                     break;
             }
-
-            if (_position.X < 0) _position = new Position(_map.MaxX, _position.Y);
-            if (_position.Y < 0) _position = new Position(_position.X, _map.MaxY);
-            if (_position.X > _map.MaxX) _position = new Position(0 , _position.Y);
-            if (_position.Y > _map.MaxY) _position = new Position(_position.X,0);
+            _position = DetectBoundariesCrossing(_position, _map);
+           
 
 
+        }
+
+        private Position DetectBoundariesCrossing(Position position, GridMap map)
+        {
+            if (position.X < 0) return new Position(map.MaxX, position.Y);
+            if (position.Y < 0) return new Position(position.X, map.MaxY);
+            if (position.X > map.MaxX) return new Position(0, position.Y);
+            if (position.Y > map.MaxY) return new Position(position.X, 0);
+            return position;
         }
 
 
