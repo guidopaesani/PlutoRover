@@ -25,9 +25,18 @@ namespace PlutoRover.Concrete
                 case Direction.North:
                     _position = new Position(_position.X, _position.Y - 1);
                     break;
+                case Direction.South:
+                    _position = new Position(_position.X, _position.Y + 1);
+                    break;
                 case Direction.East:
                     _position = new Position(_position.X - 1, _position.Y);
                     break;
+                case Direction.West:
+                    _position = new Position(_position.X + 1, _position.Y);
+                    break;
+
+
+
             }
         }
 
@@ -38,8 +47,14 @@ namespace PlutoRover.Concrete
                 case Direction.North:
                     _position = new Position(_position.X, _position.Y + 1);
                     break;
+                case Direction.South:
+                    _position = new Position(_position.X, _position.Y - 1);
+                    break;
                 case Direction.East:
                     _position = new Position(_position.X + 1, _position.Y);
+                    break;
+                case Direction.West:
+                    _position = new Position(_position.X - 1, _position.Y);
                     break;
             }
         }
