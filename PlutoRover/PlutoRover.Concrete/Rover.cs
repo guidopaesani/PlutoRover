@@ -8,11 +8,13 @@ namespace PlutoRover.Concrete
     public class Rover : IRover
     {
         private Position _position;
+        private GridMap _map;
 
         public Rover(GridMap map, Position initialPosition, Direction initialDirection)
         {
             _position = initialPosition;
             Direction = initialDirection;
+            _map = map;
         }
 
         public Position Position => _position;
@@ -34,10 +36,11 @@ namespace PlutoRover.Concrete
                 case Direction.West:
                     _position = new Position(_position.X + 1, _position.Y);
                     break;
-
-
-
             }
+            if (_position.X < 0) _position = new Position(_map.MaxX, _position.Y);
+            if (_position.Y < 0) _position = new Position(_position.X, _map.MaxY);
+            if (_position.X > _map.MaxX) _position = new Position(0, _position.Y);
+            if (_position.Y > _map.MaxY) _position = new Position(_position.X, 0);
         }
 
         public void MoveForward()
@@ -57,6 +60,15 @@ namespace PlutoRover.Concrete
                     _position = new Position(_position.X - 1, _position.Y);
                     break;
             }
+
+            if (_position.X < 0) _position = new Position(_map.MaxX, _position.Y);
+            if (_position.Y < 0) _position = new Position(_position.X, _map.MaxY);
+            if (_position.X > _map.MaxX) _position = new Position(0 , _position.Y);
+            if (_position.Y > _map.MaxY) _position = new Position(_position.X,0);
+
+
         }
+
+
     }
 }

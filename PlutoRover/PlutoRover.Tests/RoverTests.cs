@@ -15,7 +15,7 @@ namespace PlutoRover.Tests
         {
             Position initialPosition = new Position(0, 0);
             Direction initialDirection = Direction.North;
-            GridMap map = new GridMap(100, 100); 
+            GridMap map = new GridMap(100, 100);
             IRover rover = new Rover(map, initialPosition, initialDirection);
             rover.MoveForward();
             Assert.IsTrue(rover.Position.X == 0);
@@ -56,16 +56,40 @@ namespace PlutoRover.Tests
             Assert.IsTrue(rover.Position.X == 4);
             Assert.IsTrue(rover.Position.Y == 5);
         }
+        [Test]
         public void Rover_Can_Move_Forward_When_Facing_East()
         {
             Position initialPosition = new Position(5, 5);
             Direction initialDirection = Direction.East;
             GridMap map = new GridMap(100, 100);
             IRover rover = new Rover(map, initialPosition, initialDirection);
-            rover.MoveBackwards();
+            rover.MoveForward();
             Assert.IsTrue(rover.Position.X == 6);
             Assert.IsTrue(rover.Position.Y == 5);
         }
+        [Test]
+        public void Rover_Can_Wrap_Plane_X_Forward()
+        {
+            Position initialPosition = new Position(99, 99);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(100, 100);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveForward();
+            Assert.IsTrue(rover.Position.X == 99);
+            Assert.IsTrue(rover.Position.Y == 0);
+        }
+        [Test]
+        public void Rover_Can_Wrap_Plane_Y_Backwards()
+        {
+            Position initialPosition = new Position(0, 0);
+            Direction initialDirection = Direction.North;
+            GridMap map = new GridMap(50, 50);
+            IRover rover = new Rover(map, initialPosition, initialDirection);
+            rover.MoveBackwards();
+            Assert.IsTrue(rover.Position.X == 0);
+            Assert.IsTrue(rover.Position.Y == 49);
+        }
+
 
 
 
