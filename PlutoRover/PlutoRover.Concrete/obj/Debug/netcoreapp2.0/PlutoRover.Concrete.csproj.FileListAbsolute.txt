@@ -1,0 +1,9 @@
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\bin\Debug\netcoreapp2.0\PlutoRover.Concrete.deps.json
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\bin\Debug\netcoreapp2.0\PlutoRover.Concrete.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\bin\Debug\netcoreapp2.0\PlutoRover.Concrete.pdb
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.csprojResolveAssemblyReference.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.csproj.CoreCompileInputs.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.AssemblyInfoInputs.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.AssemblyInfo.cs
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Concrete\obj\Debug\netcoreapp2.0\PlutoRover.Concrete.pdb

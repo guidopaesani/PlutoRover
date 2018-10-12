@@ -1,0 +1,9 @@
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\bin\Debug\netcoreapp2.0\PlutoRover.Core.deps.json
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\bin\Debug\netcoreapp2.0\PlutoRover.Core.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\bin\Debug\netcoreapp2.0\PlutoRover.Core.pdb
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.csprojResolveAssemblyReference.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.csproj.CoreCompileInputs.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.AssemblyInfoInputs.cache
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.AssemblyInfo.cs
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.dll
+C:\Users\Guido\source\repos\FlexApps\PlutoRover\PlutoRover.Core\obj\Debug\netcoreapp2.0\PlutoRover.Core.pdb
